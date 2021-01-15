@@ -15,7 +15,7 @@ RUN set -xe &&\
   echo "${ALPINE_MIRROR_BASE}/alpine/v${VERSION}/community" >> /etc/apk/repositories && \
   apk update && \
   apk --no-cache --update upgrade && \
-  apk add --no-cache --update bash ca-certificates curl git jq nano openssl tzdata && \
+  apk add --no-cache --update bash ca-certificates curl git jq nano openssl tzdata patch && \
   rm -rf /var/cache/apk/* && \
   apk update
 
